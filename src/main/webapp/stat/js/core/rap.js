@@ -2309,7 +2309,7 @@ function deepCopy(o) {
 	            action.pageId = page.id;
 //	            console.log(p.getPage(page.id));
 //	            console.log(action);
-	            p.addAction(action);
+	            p.addAction(action,true,true);
         	}
         
         // update the current model tree

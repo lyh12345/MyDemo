@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/stat/js/core/jquery-2.1.4.min.js"></script>
+<link href="/stat/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/stat/bootstrap/css/bootstrap-select.min.css">
+<script src="/stat/bootstrap/js/bootstrap.min.js"></script>
+<script src="/stat/bootstrap/js/bootstrap-select.min.js"></script>
+</head>
+<body>
+<!--  <ul class="nav nav-tabs">  -->
+<!--  <s:iterator value="#request.action" var="action">  -->
+<!--   <li role="presentation" class="#"><a href="#" onclick="aclick(this)" requrl="<s:property value="#action.requestUrl" />" ><s:property value="#action.name"/></a></li>  -->
+<!--  </s:iterator>   -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+            <select id="xx" class="selectpicker" multiple>
+    <option value="1">广东省</option>
+    <option value="2">广西省</option>
+    <option value="3">福建省</option>
+    <option value="4">湖南省</option>
+    <option value="5">山东省</option>                            
+</select>
+
+<select class="selectpicker" data-live-search="true" multiple>
+        <optgroup id="op" label="广东省">
+                
+                
+         </optgroup>   
+                               
+</select>
+
+ <input id="a" type="button" onclick="aclick()" value="测试"></input>           
+</body>
+<script type="text/javascript">
+$('.selectpicker').selectpicker({
+    noneSelectedText: "==请选择==",
+});
+$('#xx').append("<option value='6'>山东省</option>");
+$('.selectpicker').selectpicker('refresh');
+$('.selectpicker').selectpicker('render');
+
+function aclick(){
+	$('#op').append("<option value='1'>广州市</option>");
+	$('.selectpicker').selectpicker('refresh');
+	$('.selectpicker').selectpicker('render');
+}
+</script>
+</html>

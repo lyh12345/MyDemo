@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "classpath:struts-2.0.dtd">
+
+<struts>
+
+    <!-- <package name="worldServer" namespace="/query/worldServer" extends="rap-default" >
+        <action name="*"
+                class="com.taobao.rigel.rap.reqforward.action.ReqForwardAction" method="forward">
+            <result name="success" type="dispatcher">${path}</result>
+           
+        </action>
+    </package> -->
+    
+
+	<package name="forward" namespace="/forward" extends="rap-default" >
+        <action name="forward"
+                class="com.taobao.rigel.rap.reqforward.action.ReqForwardAction" method="forward">
+            <result name="success" type="dispatcher">${path}</result>
+           
+        </action>
+    </package>
+</struts>
